@@ -1,0 +1,115 @@
+{
+  "home": {
+    "de": {
+      "hero_title": "",
+      "hero_subtitle": "",
+      "hero_verse": "Ich bin gekommen, damit sie Leben haben und es in Überfluss haben.",
+      "hero_verse_ref": "",
+      "hero_cta": "",
+      "welcome_title": "",
+      "welcome_text": "Wir freuen uns, Sie in unserer Gemeinschaft willkommen zu heißen. Al Hayat Kirche ist eine arabisch- und deutschsprachige Kirchengemeinde in Lünen, die Menschen verschiedener Kulturen und Hintergründe vereint.",
+      "services_title": "",
+      "services_subtitle": ""
+    },
+    "ar": {
+      "hero_title": "",
+      "hero_subtitle": "",
+      "hero_verse": "أَنَا جِئْتُ لِتَكُونَ لَهُمْ حَيَاةٌ وَلِيَكُونَ لَهُمْ أَفْضَلُ.",
+      "hero_verse_ref": "",
+      "hero_cta": "",
+      "welcome_title": "",
+      "welcome_text": "يسعدنا الترحيب بكم في مجتمعنا. كنيسة الحياة هي كنيسة ناطقة بالعربية والألمانية في مدينة لونن، تجمع أناساً من ثقافات وخلفيات مختلفة.",
+      "services_title": "",
+      "services_subtitle": ""
+    },
+    "custom_sections": []
+  },
+  "about": {
+    "de": {
+      "title": "Geschichte",
+      "subtitle": "Unsere Geschichte",
+      "text1": "Der Flüchtlingsstrom von 2015 zeigte den Bedarf an Unterstützung für Geflüchtete aus dem Nahen Osten, die oft traumatische Erlebnisse hinter sich hatten. Es entstanden Freundschaften und Diskussionen über den Sinn des Lebens sowie die Hilfsbereitschaft der Deutschen. Ein Hauskreis bildete sich, in dem christliche Werte und der Einfluss der Bibel auf die deutsche Kultur thematisiert wurden. Dies führte zu einer tieferen Auseinandersetzung mit dem Evangelium.",
+      "text2": "Die arabische Gruppe der EFG Lünen wuchs ab 2017 durch Kinderarbeit und Freizeiten, unterstützt vom Missionswerk Orientierung, und vereinte Menschen verschiedener arabischer Herkunft. Nach der Auflösung der EFG Lünen im April 2022 verlegten wir die Gottesdienste auf sonntags, und die Mitarbeiterschaft wuchs. Seit September 2022 sind wir als ALHAYAT Kirche ein Gemeindegründungsprojekt im BEFG und nutzen das Gemeindehaus aktiv.",
+      "text3": "Die ALHAYAT Kirche hat die Vision, Gottes Liebe zu genießen und weiterzugeben, inspiriert durch Jesu Lehre und Leben. Sie möchte Menschen ein verändertes Herz und ein gelebtes Christsein näherbringen, besonders auch Kindern durch ein kindgerechtes Programm."
+    },
+    "ar": {
+      "title": "عن كنيسة الحياة",
+      "subtitle": "قصتنا",
+      "text1": "أظهر موجة اللاجئين عام 2015 الحاجة إلى دعم اللاجئين من الشرق الأوسط الذين عانوا كثيراً. تشكّلت صداقات ونقاشات حول معنى الحياة. نشأت مجموعة منزلية تناقش القيم المسيحية وتأثير الكتاب المقدس على الثقافة الألمانية، مما أدى إلى تعمق في فهم الإنجيل.",
+      "text2": "نمت المجموعة العربية في EFG Lünen منذ عام 2017 من خلال خدمة الأطفال والنزهات، بدعم من منظمة Orientierung التبشيرية. بعد حل EFG Lünen في أبريل 2022، نقلنا الاجتماعات إلى يوم الأحد. منذ سبتمبر 2022، نحن كنيسة الحياة، مشروع تأسيس كنيسة في BEFG.",
+      "text3": "كنيسة الحياة لها رؤية للاستمتاع بمحبة الله ونقلها للآخرين، مستوحاة من تعاليم يسوع وحياته. تسعى لتقريب الناس من قلب متجدد وإيمان حي، خاصة الأطفال من خلال برامج مناسبة لهم."
+    }
+  },
+  "vision": {
+    "de": {
+      "title": "unsere Selbstverständnis",
+      "subtitle": "Wer wir sind und woran wir glauben",
+      "section1_title": "1. Unser spirituelles Verständnis",
+      "section1_text": "Das Leben, zu dem Jesus uns ruft, ist das Leben, das uns zurück zur göttlichen Schöpfung führt, in der wir Gottes Güte und erhabene Liebe genießen und widerspiegeln. Jesus, der Sohn Gottes, wurde Mensch. Er starb für unsere Sünden am Kreuz und ist von den Toten auferstanden. So versöhnt er uns mit Gott und gibt uns eine ewige Hoffnung. Durch unseren Glauben an das Evangelium empfangen wir den Heiligen Geist.",
+      "section2_title": "2. Unser Verständnis von Familie",
+      "section2_text": "Wir glauben, dass Ehe und Familie in Gottes Augen heilig sind und von ihm als Bild seiner Liebe und Treue geschaffen wurden. Die Familie bietet uns Raum, die göttliche Liebe zu verstehen und zu praktizieren. Wir erziehen unsere Kinder, indem wir sie durch die Kenntnis der Bibel und durch unser christliches Vorbild mit Gott vertraut machen.",
+      "section3_title": "3. Unser Verhältnis zur Umgebung",
+      "section3_text": "Alhayat Kirche ist eine arabisch- und deutschsprachige Kirche, deren Mitglieder und Freunde aus verschiedenen Hintergründen und Kulturen kommen. Wir streben danach, in geistlicher Einheit zu leben. Wir laden Menschen ein und heißen sie willkommen, unabhängig von ihrer Herkunft und ihrem Hintergrund, ihr Vertrauen in Jesus Christus zu setzen."
+    },
+    "ar": {
+      "title": "مفاهيم و توجوهات الكنيسة",
+      "subtitle": "من نحن وماذا نؤمن",
+      "section1_title": "1. فهمنا الروحي",
+      "section1_text": "الحياة التي يدعونا إليها يسوع هي الحياة التي تعيدنا إلى الخليقة الإلهية، حيث نتمتع بصلاح الله ومحبته السامية وننعكسها. يسوع، ابن الله، صار إنساناً. مات من أجل خطايانا على الصليب وقام من بين الأموات. بذلك يصالحنا مع الله ويعطينا رجاءً أبدياً.",
+      "section2_title": "2. فهمنا للعائلة",
+      "section2_text": "نؤمن بأن الزواج والعائلة مقدسان في عيني الله، وقد خلقهما كصورة لمحبته وأمانته. تتيح لنا العائلة الفضاء لفهم المحبة الإلهية وممارستها. نربي أطفالنا بتعريفهم بالله من خلال معرفة الكتاب المقدس والقدوة المسيحية.",
+      "section3_title": "3. علاقتنا بالمحيط",
+      "section3_text": "كنيسة الحياة هي كنيسة ناطقة بالعربية والألمانية، يأتي أعضاؤها وأصدقاؤها من خلفيات وثقافات مختلفة. نسعى للعيش في وحدة روحية. ندعو الناس ونرحب بهم، بغض النظر عن أصولهم وخلفياتهم، للثقة بيسوع المسيح."
+    },
+    "custom_sections": []
+  },
+  "children": {
+    "de": {
+      "title": "Kinderdienste",
+      "subtitle": "Unser Programm für Kinder",
+      "text1": "Bei Al Hayat Kirche legen wir besonderen Wert auf die Arbeit mit Kindern. Unser Kinderprogramm bietet altersgerechte Inhalte, die den Kindern die Liebe Gottes näherbringen und ihnen helfen, christliche Werte spielerisch zu entdecken.",
+      "text2": "Während der Gottesdienste finden spezielle Kindergruppen statt, in denen die Kinder durch Geschichten, Lieder, Spiele und kreative Aktivitäten lernen und wachsen können."
+    },
+    "ar": {
+      "title": "خدمة الاطفال",
+      "subtitle": "برنامجنا للأطفال",
+      "text1": "في كنيسة الحياة، نولي اهتماماً خاصاً بالعمل مع الأطفال. يقدم برنامج الأطفال لدينا محتوى مناسباً للأعمار يقرّب الأطفال من محبة الله ويساعدهم على اكتشاف القيم المسيحية بطريقة ممتعة.",
+      "text2": "خلال الاجتماعات تُعقد مجموعات خاصة للأطفال، حيث يتعلمون وينمون من خلال القصص والأغاني والألعاب والأنشطة الإبداعية."
+    }
+  },
+  "contact": {
+    "de": {
+      "title": "Kontakt",
+      "subtitle": "Wir freuen uns, von Ihnen zu hören",
+      "address_title": "Adresse",
+      "address": "Thomas-Mann-Straße 5, 44534 Lünen",
+      "phone_title": "Telefon",
+      "phone": "+49 1781 13 14 77",
+      "email_title": "E-Mail",
+      "email": "alhayatkirche@gmx.de",
+      "bank_title": "Bankverbindung",
+      "bank_name": "Alhayat Kirche Lünen",
+      "bank_detail": "SKB Spar- und Kreditbank Bad Homburg",
+      "bank_iban": "IBAN: DE25 5009 2100 0001 7955 03",
+      "map_note": "Alhayat Kirche ist ein anerkanntes Gründungsprojekt im BEFG (Bund der Baptisten). Spenden sind steuerlich absetzbar."
+    },
+    "ar": {
+      "title": "اتصل بنا",
+      "subtitle": "يسعدنا سماع منكم",
+      "address_title": "العنوان",
+      "address": "Thomas-Mann-Straße 5، 44534 Lünen",
+      "phone_title": "الهاتف",
+      "phone": "+49 1781 13 14 77",
+      "email_title": "البريد الإلكتروني",
+      "email": "alhayatkirche@gmx.de",
+      "bank_title": "معلومات التحويل البنكي",
+      "bank_name": "Alhayat Kirche Lünen",
+      "bank_detail": "SKB Spar- und Kreditbank Bad Homburg",
+      "bank_iban": "IBAN: DE25 5009 2100 0001 7955 03",
+      "map_note": "كنيسة الحياة مشروع تأسيس معترف به في BEFG (اتحاد المعمدانيين). التبرعات معفاة من الضرائب."
+    }
+  },
+  "events": {
+    "custom_sections": []
+  }
+}

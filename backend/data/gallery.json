@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "title_de": "Gottesdienst",
+    "title_ar": "قداسات",
+    "description_de": "Bilder aus unseren Gottesdiensten",
+    "description_ar": "صور من قداساتنا",
+    "images": [
+      {
+        "id": "1776255072688-qrcl21m3gr8",
+        "url": "/uploads/images/1776255072665-WhatsApp_Image_2026-04-12_at_13.45.51.jpeg",
+        "filename": "1776255072665-WhatsApp_Image_2026-04-12_at_13.45.51.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title_de": "Freizeit Sommer 2024",
+    "title_ar": "نزهة صيف 2024",
+    "description_de": "Unsere Sommerfreizeit 2024",
+    "description_ar": "نزهتنا الصيفية 2024",
+    "images": []
+  }
+]

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin — Al Hayat Kirche</title>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<!-- Login Screen -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logo">
+      <img src="/Logo.png" class="admin-login-logo" alt="Al Hayat Kirche"/>
+    </div>
+    <h1>Al Hayat Kirche</h1>
+    <p class="login-sub">Admin Panel</p>
+    <div id="loginError" class="alert alert-error hidden"></div>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" id="loginUser" placeholder="admin" autocomplete="username"/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password"/>
+    </div>
+    <button class="btn btn-primary full-w" id="loginBtn">Login</button>
+  </div>
+</div>
+
+<!-- Admin Dashboard -->
+<div id="adminApp" class="admin-app hidden">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <img src="/Logo.png" class="sidebar-logo-img" alt="Al Hayat Kirche"/>
+      </div>
+      <div>
+        <div class="sidebar-title">Al Hayat</div>
+        <div class="sidebar-sub">Admin Panel</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-panel="events">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Events / Termine
+      </button>
+      <button class="nav-item" data-panel="media">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        Media
+      </button>
+      <button class="nav-item" data-panel="content">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Content Editor
+      </button>
+      <button class="nav-item" data-panel="sections">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="5" rx="1"/><rect x="3" y="10" width="18" height="5" rx="1"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg>
+        Content Sections
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="btn-logout" id="logoutBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+        Logout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="topbar-title" id="topbarTitle">Events</div>
+      <div class="topbar-right">
+        <span class="topbar-user" id="topbarUser"></span>
+        <a href="/" target="_blank" class="btn btn-sm btn-outline">View Site ↗</a>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast hidden" id="toast"></div>
+
+    <!-- ─── EVENTS PANEL ─── -->
+    <div class="panel active" id="panel-events">
+      <div class="panel-header">
+        <h2>Events & Termine</h2>
+        <button class="btn btn-primary" id="addEventBtn">+ Add Event</button>
+      </div>
+
+      <!-- Event Form -->
+      <div class="card form-card hidden" id="eventForm">
+        <h3 id="eventFormTitle">New Event</h3>
+        <input type="hidden" id="eventId"/>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Title (German) <span class="required-star">*</span></label>
+            <input type="text" id="eventTitleDe" placeholder="Gottesdienst"/>
+          </div>
+          <div class="form-group">
+            <label>Title (Arabic) <span class="required-star">*</span></label>
+            <input type="text" id="eventTitleAr" placeholder="اجتماع الأحد" dir="rtl"/>
+          </div>
+          <div class="form-group">
+            <label>Description (DE)</label>
+            <textarea id="eventDescDe" rows="2" placeholder="Description in German..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Description (AR)</label>
+            <textarea id="eventDescAr" rows="2" placeholder="الوصف بالعربية..." dir="rtl"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Start Time <span class="required-star">*</span></label>
+            <input type="time" id="eventTime"/>
+          </div>
+          <div class="form-group">
+            <label>End Time</label>
+            <input type="time" id="eventEndTime"/>
+          </div>
+          <div class="form-group">
+            <label>Color</label>
+            <input type="color" id="eventColor" value="#2e7d32"/>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="eventIsSpecial"/> Special Event (with poster image)
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="eventRecurring"/> Recurring weekly
+            </label>
+          </div>
+          <div class="form-group" id="eventRecurringDayGroup" style="display:none">
+            <label>Day of week</label>
+            <select id="eventRecurringDay">
+              <option value="0">Sunday / Sonntag</option>
+              <option value="1">Monday / Montag</option>
+              <option value="2">Tuesday / Dienstag</option>
+              <option value="3">Wednesday / Mittwoch</option>
+              <option value="4">Thursday / Donnerstag</option>
+              <option value="5">Friday / Freitag</option>
+              <option value="6">Saturday / Samstag</option>
+            </select>
+          </div>
+          <div class="form-group" id="eventStartDateGroup">
+            <label>Start Date <span class="required-star">*</span></label>
+            <input type="date" id="eventStartDate"/>
+          </div>
+          <div class="form-group" id="eventEndDateGroup">
+            <label>End Date <span style="font-weight:400;color:#888">(optional)</span></label>
+            <input type="date" id="eventEndDate"/>
+          </div>
+          <!-- Image upload: 3-step — select → Upload Image → Save Event -->
+          <div class="form-group col-span-2" id="eventImageGroup" style="display:none">
+            <label>Poster / Leaflet Image</label>
+            <div class="image-upload-steps">
+              <!-- Step 1: pick file -->
+              <div class="file-drop" id="eventImageDrop">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <p id="eventImageDropLabel">Step 1 — Click or drag to select image (JPG, PNG)</p>
+                <input type="file" id="eventImageFile" accept="image/*" hidden/>
+              </div>
+              <!-- Step 2: explicit upload button (shown after file selected) -->
+              <div id="eventImageActions" style="display:none;margin-top:10px;display:none">
+                <button type="button" class="btn btn-outline" id="uploadImageBtn">↑ Upload Image</button>
+                <span id="eventImageUploadStatus" style="margin-left:10px;font-size:0.82rem;color:#888"></span>
+              </div>
+              <!-- Step 3: preview (shown after upload confirmed) -->
+              <div id="eventImagePreview" style="margin-top:8px"></div>
+              <div id="eventImageCurrent" style="font-size:0.82rem;color:#888;margin-top:4px"></div>
+            </div>
+          </div>
+        </div>
+        <div id="eventValidationError" class="validation-error hidden"></div>
+        <div class="form-actions">
+          <button class="btn btn-primary" id="saveEventBtn">Save Event</button>
+          <button class="btn btn-ghost" id="cancelEventBtn">Cancel</button>
+        </div>
+      </div>
+
+      <div class="events-table-wrap card">
+        <table class="data-table" id="eventsTable">
+          <thead>
+            <tr><th>Title (DE)</th><th>Title (AR)</th><th>Time</th><th>Type</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="eventsBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ─── MEDIA PANEL ─── -->
+    <div class="panel hidden" id="panel-media">
+      <div class="panel-header">
+        <h2>Media</h2>
+        <div class="tab-group" id="mediaPanelTabGroup">
+          <button class="tab-btn active" data-media-tab="photos">Photos / Fotos</button>
+          <button class="tab-btn" data-media-tab="videos">Videos</button>
+        </div>
+      </div>
+
+      <!-- ── Photos sub-panel ── -->
+      <div id="media-sub-photos">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+          <button class="btn btn-primary" id="addAlbumBtn">+ New Album</button>
+        </div>
+        <div class="card form-card hidden" id="albumForm">
+          <h3 id="albumFormTitle">New Album</h3>
+          <input type="hidden" id="albumId"/>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Album Title (DE)</label>
+              <input type="text" id="albumTitleDe"/>
+            </div>
+            <div class="form-group">
+              <label>Album Title (AR)</label>
+              <input type="text" id="albumTitleAr" dir="rtl"/>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" id="saveAlbumBtn">Save Album</button>
+            <button class="btn btn-ghost" id="cancelAlbumBtn">Cancel</button>
+          </div>
+        </div>
+        <div id="albumsList"></div>
+      </div>
+
+      <!-- ── Videos sub-panel ── -->
+      <div id="media-sub-videos" style="display:none">
+        <div class="card form-card">
+          <h3>Upload New Video</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Title (DE)</label>
+              <input type="text" id="videoTitleDe"/>
+            </div>
+            <div class="form-group">
+              <label>Title (AR)</label>
+              <input type="text" id="videoTitleAr" dir="rtl"/>
+            </div>
+            <div class="form-group">
+              <label>Description (DE)</label>
+              <input type="text" id="videoDescDe"/>
+            </div>
+            <div class="form-group">
+              <label>Description (AR)</label>
+              <input type="text" id="videoDescAr" dir="rtl"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Video File (MP4, WebM, MOV)</label>
+            <div class="file-drop" id="videoDrop">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+              <p>Drag &amp; drop or click to select video</p>
+              <input type="file" id="videoFile" accept="video/*" hidden/>
+            </div>
+            <div id="videoFileName" style="font-size:0.82rem;color:#888;margin-top:6px;"></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" id="uploadVideoBtn">Upload Video</button>
+          </div>
+          <div class="upload-progress hidden" id="videoProgress">
+            <div class="progress-bar"><div class="progress-fill" id="videoProgressFill"></div></div>
+            <span id="videoProgressLabel">Uploading...</span>
+          </div>
+        </div>
+        <div class="card mt-24">
+          <h3 style="margin-bottom:20px">Uploaded Videos</h3>
+          <div id="videosList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── CONTENT PANEL ─── -->
+    <div class="panel hidden" id="panel-content">
+      <div class="panel-header">
+        <h2>Content Editor</h2>
+        <div class="tab-group">
+          <button class="tab-btn active" data-section="home">Home</button>
+          <button class="tab-btn" data-section="about">Geschichte</button>
+          <button class="tab-btn" data-section="vision">Selbstverständnis</button>
+          <button class="tab-btn" data-section="children">Kinderdienste</button>
+          <button class="tab-btn" data-section="contact">Contact</button>
+        </div>
+      </div>
+      <div id="contentEditor"></div>
+    </div>
+
+    <!-- ─── SECTIONS PANEL ─── -->
+    <div class="panel hidden" id="panel-sections">
+      <!-- dynamically rendered by JS -->
+    </div>
+
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

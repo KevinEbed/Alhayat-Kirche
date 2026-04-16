@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Hayat Kirche | كنيسة الحياة</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Cairo is loaded via styles.css with all weights — Amiri removed, Cairo is the universal Arabic font -->
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" data-page="home">
+        <img src="Logo.png" class="nav-logo-img" alt="Al Hayat Kirche" />
+        <div class="logo-text">
+          <span class="logo-de">Al Hayat Kirche</span>
+          <span class="logo-ar">كنيسة الحياة</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-page="home" data-key="nav_home">Startseite</a>
+        <a href="#vision" class="nav-link" data-page="vision" data-key="nav_vision">Unsere Selbstverständnis</a>
+        <a href="#events" class="nav-link" data-page="events" data-key="nav_events">Kalender</a>
+        <a href="#children" class="nav-link" data-page="children" data-key="nav_children">Kinderdienste</a>
+        <a href="#media" class="nav-link" data-page="media" data-key="nav_media">Medien</a>
+        <a href="#about" class="nav-link" data-page="about" data-key="nav_about">Geschichte</a>
+        <a href="#contact" class="nav-link" data-page="contact" data-key="nav_contact">Kontakt</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn">
+            <span class="lang-current" id="langCurrent">DE</span>
+            <svg width="10" height="6" viewBox="0 0 10 6">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="de">DE Deutsch</button>
+            <button class="lang-option" data-lang="ar">AR العربية</button>
+          </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════ PAGES ═══ -->
+  <main id="main">
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">Willkommen bei</div>
+          <h1 class="hero-title" data-content="home.hero_title">Al Hayat Kirche</h1>
+          <p class="hero-sub" data-content="home.hero_subtitle">كنيسة الحياة</p>
+          <blockquote class="hero-verse">
+            <span data-content="home.hero_verse">Ich bin gekommen, damit sie Leben haben und es in Überfluss
+              haben.</span>
+            <cite data-key="hero_verse_ref" data-content="home.hero_verse_ref">Joh. 10:10</cite>
+          </blockquote>
+          <a href="#vision" class="btn btn-primary nav-link" data-key="hero_cta" data-content="home.hero_cta">Mehr
+            erfahren</a>
+          <div class="hero-event-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            <span data-key="main_event_text">Jeden Sonntag · 10:40 – 12:30 Uhr</span>
+          </div>
+        </div>
+        <!-- Centered background logo watermark -->
+        <div class="hero-logo-watermark">
+          <img src="Logo.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+
+      <!-- Welcome -->
+      <section class="section">
+        <div class="container">
+          <div class="section-label" data-key="welcome_title" data-content="home.welcome_title">Herzlich Willkommen</div>
+          <p class="welcome-text" data-key="welcome_text" data-content="home.welcome_text">Wir freuen uns, Sie in unserer Gemeinschaft
+            willkommen zu heißen.</p>
+        </div>
+      </section>
+
+      <!-- Weekly Services Quick View -->
+      <section class="section bg-soft">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-key="services_title" data-content="home.services_title">Gottesdienste &amp; Termine</h2>
+            <p data-key="services_subtitle" data-content="home.services_subtitle">Wir laden Sie herzlich ein, uns zu besuchen</p>
+          </div>
+          <div class="services-grid" id="homeServicesGrid">
+            <!-- Populated by JS -->
+          </div>
+          <div class="text-center mt-40">
+            <a href="#events" class="btn btn-outline nav-link" data-key="see_calendar">Alle Termine ansehen</a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- VISION (Unsere Selbstverständnis) -->
+    <section id="vision" class="page">
+      <div class="page-hero">
+        <div class="container">
+          <h1 data-content="vision.title">Unsere Selbstverständnis</h1>
+          <p data-content="vision.subtitle">Wer wir sind und woran wir glauben</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container content-narrow">
+          <div class="vision-block">
+            <h3 data-content="vision.section1_title">1. Unser spirituelles Verständnis</h3>
+            <p data-content="vision.section1_text"></p>
+          </div>
+          <div class="vision-block">
+            <h3 data-content="vision.section2_title">2. Unser Verständnis von Familie</h3>
+            <p data-content="vision.section2_text"></p>
+          </div>
+          <div class="vision-block">
+            <h3 data-content="vision.section3_title">3. Unser Verhältnis zur Umgebung</h3>
+            <p data-content="vision.section3_text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS (Kalender) -->
+    <section id="events" class="page">
+      <div class="page-hero">
+        <div class="container">
+          <h1 data-key="nav_events">Kalender</h1>
+          <p data-key="events_sub">Unsere Veranstaltungen und Gottesdienste</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="calendar-wrapper">
+            <div class="calendar-header">
+              <button class="cal-nav" id="calPrev">&#8249;</button>
+              <h2 class="cal-month" id="calMonthLabel"></h2>
+              <button class="cal-nav" id="calNext">&#8250;</button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </div>
+          <!-- Events list for selected day -->
+          <div class="events-sidebar" id="eventsSidebar">
+            <h3 id="selectedDateLabel"></h3>
+            <div id="dayEventsList"></div>
+          </div>
+          <!-- Special upcoming events (shown only when data exists) -->
+          <div class="upcoming-events mt-60" id="specialEventsSection" style="display:none">
+            <h3 class="section-label">Besondere Veranstaltungen</h3>
+            <div class="special-events-list" id="specialEventsList"></div>
+          </div>
+
+          <!-- All upcoming events -->
+          <div class="upcoming-events mt-60">
+            <h3 class="section-label" data-key="recurring_events">Wiederkehrende Veranstaltungen</h3>
+            <div class="events-list" id="recurringList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHILDREN (Kinderdienste) -->
+    <section id="children" class="page">
+      <div class="page-hero">
+        <div class="container">
+          <h1 data-content="children.title">Kinderdienste</h1>
+          <p data-content="children.subtitle">Unser Programm für Kinder</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container content-narrow">
+          <p class="body-text" data-content="children.text1"></p>
+          <div class="divider-line"></div>
+          <p class="body-text" data-content="children.text2"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA (Fotos & Videos) -->
+    <section id="media" class="page">
+      <div class="page-hero">
+        <div class="container">
+          <h1 data-key="nav_media">Medien</h1>
+          <p data-key="media_sub">Fotos und Videos aus unserem Gemeindeleben</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <!-- Filter tabs -->
+          <div class="media-filter-tabs" id="mediaFilterTabs">
+            <button class="media-filter-btn active" data-filter="all" data-key="media_filter_all">Alle</button>
+            <button class="media-filter-btn" data-filter="images" data-key="media_filter_images">Fotos</button>
+            <button class="media-filter-btn" data-filter="videos" data-key="media_filter_videos">Videos</button>
+          </div>
+          <!-- Photos -->
+          <div id="mediaImagesSection">
+            <div class="album-tabs" id="albumTabs"></div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+            <div class="gallery-empty hidden" id="galleryEmpty">
+              <p data-key="no_images">Noch keine Bilder vorhanden.</p>
+            </div>
+          </div>
+          <!-- Videos -->
+          <div id="mediaVideosSection">
+            <div class="video-grid" id="videoGrid"></div>
+            <div class="gallery-empty hidden" id="videoEmpty">
+              <p data-key="no_videos">Noch keine Videos vorhanden.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (Geschichte) -->
+    <section id="about" class="page">
+      <div class="page-hero">
+        <div class="container">
+          <h1 data-content="about.title">Geschichte</h1>
+          <p data-content="about.subtitle">Unsere Geschichte</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container content-narrow">
+          <p class="body-text" data-content="about.text1"></p>
+          <div class="divider-line"></div>
+          <p class="body-text" data-content="about.text2"></p>
+          <div class="divider-line"></div>
+          <p class="body-text" data-content="about.text3"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page">
+      <div class="page-hero">
+        <div class="container">
+          <h1 data-content="contact.title">Kontakt</h1>
+          <p data-content="contact.subtitle">Wir freuen uns, von Ihnen zu hören</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="contact-block">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)"
+                    stroke-width="1.5">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                    <circle cx="12" cy="9" r="2.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 data-content="contact.address_title">Adresse</h4>
+                  <p data-content="contact.address">Thomas-Mann-Straße 5, 44534 Lünen</p>
+                </div>
+              </div>
+              <div class="contact-block">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)"
+                    stroke-width="1.5">
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 data-content="contact.phone_title">Telefon</h4>
+                  <p><a data-content="contact.phone" data-key="phone_display" href="tel:+4917811314 77" dir="ltr">+49 1781 13 14 77</a></p>
+                </div>
+              </div>
+              <div class="contact-block">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)"
+                    stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 data-content="contact.email_title">E-Mail</h4>
+                  <p><a data-content="contact.email" href="mailto:alhayatkirche@gmx.de">alhayatkirche@gmx.de</a></p>
+                </div>
+              </div>
+              <div class="contact-block">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)"
+                    stroke-width="1.5">
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <path d="M12 12v0M8 12v0M16 12v0" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 data-content="contact.bank_title">Bankverbindung</h4>
+                  <p data-content="contact.bank_name">Alhayat Kirche Lünen</p>
+                  <p data-content="contact.bank_detail">SKB Spar- und Kreditbank Bad Homburg</p>
+                  <p data-content="contact.bank_iban">IBAN: DE25 5009 2100 0001 7955 03</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-map">
+              <iframe
+                src="https://maps.google.com/maps?q=Thomas-Mann-Stra%C3%9Fe+5%2C+44534+L%C3%BCnen%2C+Germany&output=embed&hl=de"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Al Hayat Kirche – Thomas-Mann-Straße 5, Lünen">
+              </iframe>
+              <a href="https://maps.app.goo.gl/6ga3CuVbVnGh1Buz5" target="_blank" rel="noopener noreferrer"
+                class="map-open-link">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span data-key="open_in_maps">In Google Maps öffnen</span>
+              </a>
+            </div>
+          </div>
+          <p class="map-note" data-content="contact.map_note"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="Logo.png" class="footer-logo-img" alt="Al Hayat Kirche" />
+          <span>Al Hayat Kirche | كنيسة الحياة</span>
+        </div>
+
+        <!-- Contact info -->
+        <div class="footer-info">
+          <div class="footer-info-block">
+            <div class="footer-info-label" data-key="footer_address_label">Adresse</div>
+            <div class="footer-info-text">Thomas-Mann-Straße 5<br>44534 Lünen</div>
+          </div>
+          <div class="footer-info-block">
+            <div class="footer-info-label" data-key="footer_phone_label">Telefon</div>
+            <div class="footer-info-text">
+              <a href="tel:+4917811314 77" data-key="phone_display" dir="ltr">+49 1781 13 14 77</a>
+            </div>
+          </div>
+          <div class="footer-info-block">
+            <div class="footer-info-label" data-key="footer_email_label">E-Mail</div>
+            <div class="footer-info-text"><a href="mailto:alhayatkirche@gmx.de">alhayatkirche@gmx.de</a></div>
+          </div>
+          <div class="footer-info-block">
+            <div class="footer-info-label" data-key="footer_bank_label">Bankverbindung</div>
+            <div class="footer-info-text">
+              <span data-key="footer_bank_name">Alhayat Kirche Lünen</span><br>
+              SKB Spar- und Kreditbank Bad Homburg<br>
+              <span dir="ltr">IBAN: DE25 5009 2100 0001 7955 03</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/groups/1845927812318286/" target="_blank" rel="noopener noreferrer"
+          class="footer-social">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+          </svg>
+          Facebook
+        </a>
+
+        <p class="footer-copy" data-key="footer_copy_text">© 2024 Al Hayat Kirche Lünen. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════ LIGHTBOX ══════ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ VIDEO MODAL ════════ -->
+  <div class="modal" id="videoModal">
+    <div class="modal-overlay" id="videoModalOverlay"></div>
+    <div class="modal-content video-modal-content">
+      <button class="modal-close" id="videoModalClose">&times;</button>
+      <video id="modalVideo" controls style="width:100%;border-radius:4px;"></video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
